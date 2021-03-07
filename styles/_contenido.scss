@@ -1,0 +1,381 @@
+main{
+    #titulo{
+        color: $color_menu;
+        letter-spacing: 0;
+        padding: 200px;
+        
+        h1{
+            font-family: $ibm_plex;
+            font-size: 64px;
+
+            span{
+                text-decoration: line-through;
+            }
+        }
+        
+        p{
+            font-family: $ibm_mono;
+            font-size: 16px;
+            line-height: 24px;
+            width: 628px;
+            height: 48px;
+            text-align: justify;
+        }
+
+        button{
+            background: $color_boton;
+            border: none;
+            font-family: $ibm_mono;
+            font-size: 18px;
+            text-align: center;
+            line-height: 24px;
+            width: 226px;
+            height: 56px;
+            margin-top: 56px;
+
+            &:hover{
+                color:$color_contenido;
+                background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            }
+        }
+        //Version Mobile
+        @media (max-width: $breakpoint_mobile){
+            padding: 0 16px 0 16px;
+            display: flex;
+            flex-flow: wrap column;
+
+            h1{
+                font-size: 36px;
+                line-height: 42px;
+            } 
+
+            p{
+                font-size: 14px;
+                line-height: 22px;
+                width: 288px;
+                height: 66px;
+            }
+
+            button{
+                font-size: 16px;
+                line-height: 22px;
+                width: 288px;
+                height: 48px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    #episodios{
+        .fondoEp{
+            background-image: linear-gradient(225deg, $bg_right_contenido 0%, $bg_left_contenido 100%);
+            transform: skew(0, -5deg);
+            min-height: 1042.6px;
+        }
+
+        aside{
+            position: absolute;
+            z-index: 1;
+            h2{
+                font-family: $ibm_plex;
+                color: $color_contenido;
+            }
+        }
+        
+        @media (min-width: $breakpoint_mobile){
+            aside{
+                margin-top: 100px;
+                width: 100%;
+    
+                h2{
+                    font-size: 48px;
+                    padding-left: 200px;
+                }
+    
+                .primerSP{grid-area: primero;}
+                .segundoSP{grid-area: segundo;}
+                .tercerP{grid-area: tercero;}
+                .cuartoSP{grid-area: cuarto;}
+    
+                .spotify{
+                    display:grid;
+                    row-gap: 72px;
+                    column-gap: 72px;
+                    grid-template-areas: 
+                        "primero segundo"
+                        "tercero cuarto";
+                    justify-content: center;
+                    
+                    iframe{
+                        width: 548px;
+                        height: 232px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $breakpoint_mobile){
+            aside{
+                width: 320px;
+            }
+
+            h2{
+                font-size: 36px;
+                padding-left: 16px;
+            }
+
+            .spotify{
+                display: flex;
+                flex-direction: column;
+                
+                iframe{
+                    width: 298px;
+                    height: 225px;
+                }
+            }
+        }
+    }
+
+    #nosotros{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        aside{
+            letter-spacing: 0;
+            h2{
+                font-family: $ibm_plex;
+                font-size: 48px;
+                color: $color_menu;
+            }
+    
+            p{
+                font-family: $ibm_mono;
+                color: $color_menu;
+            }
+        } 
+        
+        @media (min-width: $breakpoint_mobile){
+            margin-top: -110px;
+            
+            img{
+                width: 457.6px;
+                height: 660px;
+            }
+            
+            aside{
+                margin-left: 62.4px;
+
+                h2{
+                    font-size: 48px;
+                    line-height: 42px;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                    width: 464px;
+                    height: 204px;
+                }
+            } 
+        }
+
+        @media (max-width: $breakpoint_mobile){
+            flex-direction: column;
+            margin-top: -80px;
+
+            img{
+                width: 360px;
+                height: 519px;
+            }
+
+            aside{
+                margin-left: 16px;
+    
+                h2{
+                    font-size: 36px;
+                }
+
+                p{
+                    font-size: 14px;
+                    line-height: 22px;
+                    width: 288px;
+                    height: 254px;
+                }
+            } 
+        }
+    }
+
+    #entrevistas{
+
+        h2{
+            font-family: $ibm_plex;
+            font-size: 48px;
+            color: $color_menu;
+            padding-left: 200px;
+            letter-spacing: 0;
+        }
+
+        aside{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img{
+                width: 480px;
+                height: 364px;
+            }
+        }  
+        
+        @media (max-width: $breakpoint_mobile){
+            h2{
+                padding-left: 16px;
+                font-size: 32px;
+                line-height: 42px;
+            }
+            
+            aside{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+
+                img{
+                    width: 320px;
+                    height: 243px;
+                }
+            }          
+        }
+    }
+
+    #topicos{
+        letter-spacing: 0;
+        position: relative;
+
+        h2{
+            font-family: $ibm_plex;
+            font-size: 48px;
+            color: $color_menu;
+            padding-left: 200px; 
+        }
+
+        .temas{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            padding: 0 200px 0 200px;
+
+            div{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 260px;
+                height: 194px;
+
+                img{
+                    width: 104px;
+                    height: 104px;
+                }
+
+                p{
+                    font-family: $ibm_plex; 
+                    font-size: 24px;
+                    text-align: center;
+                }
+            }
+        } 
+        @media (max-width: $breakpoint_mobile){            
+            h2{
+                padding-left: 16px;
+                font-size: 36px;
+                line-height: 42px;
+            }
+    
+            .temas{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0px;
+                
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 320px;
+                    height: 194px;
+                }
+            }
+        }
+        
+    }    
+    #novedades{
+        margin-top: 50px;
+        .fondoNov{
+            background-image: linear-gradient(225deg, $bg_right_contenido 0%, $bg_left_contenido 100%);
+            transform: skew(0, -5deg);
+            //min-height: 318px;
+            position: relative;
+            height: 400px;
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                100% 100%,
+                0 calc(100% - 8vw)
+            );       
+        }
+
+        aside{
+            position: absolute;
+            z-index: 1;
+            margin-top: 100px;
+            width: 100%;
+            
+            h3{
+                font-family: $ibm_plex;
+                font-size: 48px;
+                color: $color_contenido;
+                letter-spacing: 0;
+                text-align: center;
+            }
+    
+            button{
+                background: $color_boton;
+                border: none;
+                font-family: $ibm_mono;
+                font-size: 18px;
+                text-align: center;
+                line-height: 24px;
+                width: 345px;
+                height: 56px;
+                margin: 0;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            @media (max-width: $breakpoint_mobile){ 
+                h3{
+                    font-size: 36px;
+                    line-height: 42px;
+                    height: 126px;
+                    width: 288px;
+                }
+                
+                .fondoNov{
+                    height: 200px;
+                }
+
+                button{
+                    font-size: 16px;
+                    line-height: 22px;
+                    width: 288px;
+                    height: 48px;
+                    padding: 0 16px 0 16px;
+                }
+            }
+        }  
+    }
+}

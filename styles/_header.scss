@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    //max-width: 1140px;
+    @media (max-width: $breakpoint_mobile){
+        max-width: 320px;
+    }
+}
+
+header{
+    #menuToggle{
+        input[type="checkbox"] {
+            opacity: 0;
+        }
+
+        .fa-bars{
+            width: 18px;
+            height: 2px;
+        }
+
+        .fa-times{
+            width: 14px;
+            height: 14px;
+        }
+
+        a{
+            font-family: $ibm_mono;
+            font-size: 16px;
+            
+            text-decoration: none;
+            letter-spacing: 0;
+            line-height: 28px;
+        }
+    }
+    //Version Desktop
+    @media (min-width: $breakpoint_mobile){
+        height: 26px;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px 0 100px;
+
+        #menuToggle ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none;
+
+            li{
+                padding-right: 48px;
+
+                a{
+                    color: $color_menu;
+                    &:hover{
+                        color:$color_boton;
+                        text-decoration: line-through;
+                    }
+
+                    &:active{
+                        color: rgba(6,10,36,0.56);
+                    }
+                }   
+            }
+        }
+    }
+    //Version Mobile
+    @media (max-width: $breakpoint_mobile){
+        padding: 0 16px 0 16px;
+        nav{
+            width: 320px;
+            height: 224px;
+            display: none;
+            position: absolute;
+
+            a{
+                color: $color_contenido;
+                background-color: $color_menu_bar;
+                font-size: 16px;
+                text-decoration: none;
+                display: block;
+                padding: 12px 0 12px 16px;
+            }
+        }
+
+        input[type="checkbox"], .fa-bars{
+            position: absolute;
+            box-sizing: border-box;
+            right: 12px;
+            top: 10px;
+        }
+
+        input[type="checkbox"], .fa-times{
+            position: absolute;
+            box-sizing: border-box;
+            right: 12px;
+            top: 10px;
+        }
+
+        .fa-bars, .fa-times{
+            pointer-events: none;
+        }
+
+        input[type="checkbox"]:checked ~ nav {
+            display: block;
+        }
+
+        input[type="checkbox"]:checked ~ .fa-bars {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .fa-bars ~ .fa-times {
+            display: block;
+        }
+
+        input[type="checkbox"]:checked ~ .fa-times ~ .fa-bars {
+            display: none;
+        }
+
+        input[type="checkbox"] ~ .fa-bars ~ .fa-times {
+            display: none;
+        }
+    }
+}
