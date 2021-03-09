@@ -80,7 +80,7 @@ header #menuToggle a {
     padding: 0 16px 0 16px;
   }
   header nav {
-    width: 320px;
+    width: 100%;
     height: 224px;
     display: none;
     position: absolute;
@@ -186,7 +186,7 @@ main #titulo button:hover {
   main #titulo p {
     font-size: 14px;
     line-height: 22px;
-    width: 288px;
+    width: 100%;
     height: 66px;
   }
   main #titulo button {
@@ -203,6 +203,7 @@ main #episodios .fondoEp {
   -webkit-transform: skew(0, -5deg);
           transform: skew(0, -5deg);
   min-height: 1042.6px;
+  width: 100%;
 }
 
 main #episodios aside {
@@ -262,6 +263,9 @@ main #episodios aside h2 {
 }
 
 @media (max-width: 321px) {
+  main #episodios .fondoEp {
+    width: 320px;
+  }
   main #episodios aside {
     width: 320px;
   }
@@ -277,6 +281,9 @@ main #episodios aside h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main #episodios .spotify iframe {
     width: 298px;
@@ -344,7 +351,7 @@ main #nosotros aside p {
     margin-top: -80px;
   }
   main #nosotros img {
-    width: 360px;
+    width: 100%;
     height: 519px;
   }
   main #nosotros aside {
@@ -381,7 +388,7 @@ main #entrevistas aside {
 }
 
 main #entrevistas aside img {
-  width: 480px;
+  width: 33vw;
   height: 364px;
 }
 
@@ -406,7 +413,7 @@ main #entrevistas aside img {
             flex-direction: column;
   }
   main #entrevistas aside img {
-    width: 320px;
+    width: 100%;
     height: 243px;
   }
 }
@@ -434,7 +441,7 @@ main #topicos .temas {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
-  padding: 0 200px 0 200px;
+  padding: 0 200px 40px 200px;
 }
 
 main #topicos .temas div {
@@ -459,6 +466,7 @@ main #topicos .temas div img {
 
 main #topicos .temas div p {
   font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
   font-size: 24px;
   text-align: center;
 }
@@ -515,10 +523,17 @@ main #novedades .fondoNov {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
 }
 
+@media (max-width: 321px) {
+  main #novedades .fondoNov {
+    width: 320px;
+    height: 350px;
+  }
+}
+
 main #novedades aside {
   position: absolute;
   z-index: 1;
-  margin-top: 100px;
+  margin-top: 70px;
   width: 100%;
 }
 
@@ -534,6 +549,7 @@ main #novedades aside button {
   background: #00F3BB;
   border: none;
   font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
   font-size: 18px;
   text-align: center;
   line-height: 24px;
@@ -547,14 +563,14 @@ main #novedades aside button {
 }
 
 @media (max-width: 321px) {
+  main #novedades aside {
+    margin-top: 50px;
+  }
   main #novedades aside h3 {
     font-size: 36px;
     line-height: 42px;
     height: 126px;
     width: 288px;
-  }
-  main #novedades aside .fondoNov {
-    height: 200px;
   }
   main #novedades aside button {
     font-size: 16px;

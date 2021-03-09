@@ -1,9 +1,10 @@
 main{
+//Titulo Desktop    
     #titulo{
         color: $color_menu;
         letter-spacing: 0;
         padding: 200px;
-        
+        //Titulo
         h1{
             font-family: $ibm_plex;
             font-size: 64px;
@@ -12,7 +13,7 @@ main{
                 text-decoration: line-through;
             }
         }
-        
+        //Parrafo
         p{
             font-family: $ibm_mono;
             font-size: 16px;
@@ -21,7 +22,7 @@ main{
             height: 48px;
             text-align: justify;
         }
-
+        //Boton
         button{
             background: $color_boton;
             border: none;
@@ -38,24 +39,24 @@ main{
                 background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
             }
         }
-        //Version Mobile
+//Titulo Mobile 
         @media (max-width: $breakpoint_mobile){
             padding: 0 16px 0 16px;
             display: flex;
             flex-flow: wrap column;
-
+            //Titulo
             h1{
                 font-size: 36px;
                 line-height: 42px;
             } 
-
+            //Parrafo
             p{
                 font-size: 14px;
                 line-height: 22px;
-                width: 288px;
+                width: 100%;
                 height: 66px;
             }
-
+            //Boton
             button{
                 font-size: 16px;
                 line-height: 22px;
@@ -65,33 +66,36 @@ main{
             }
         }
     }
-
+//Episodios Desktop
     #episodios{
+        //Fondo
         .fondoEp{
             background-image: linear-gradient(225deg, $bg_right_contenido 0%, $bg_left_contenido 100%);
             transform: skew(0, -5deg);
             min-height: 1042.6px;
+            width: 100%;
         }
 
         aside{
             position: absolute;
             z-index: 1;
+            //Titulo
             h2{
                 font-family: $ibm_plex;
                 color: $color_contenido;
             }
         }
-        
+//Episodios Desktop       
         @media (min-width: $breakpoint_mobile){
             aside{
                 margin-top: 100px;
                 width: 100%;
-    
+                //Titulo
                 h2{
                     font-size: 48px;
                     padding-left: 200px;
                 }
-    
+                //Spotify
                 .primerSP{grid-area: primero;}
                 .segundoSP{grid-area: segundo;}
                 .tercerP{grid-area: tercero;}
@@ -113,20 +117,25 @@ main{
                 }
             }
         }
-
+//Episodios Mobile
         @media (max-width: $breakpoint_mobile){
+            .fondoEp{
+                width: 320px;
+            }
+            
             aside{
                 width: 320px;
             }
-
+            //Titulo
             h2{
                 font-size: 36px;
                 padding-left: 16px;
             }
-
+            //Spotify
             .spotify{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 
                 iframe{
                     width: 298px;
@@ -135,7 +144,7 @@ main{
             }
         }
     }
-
+//De donde venimos Desktop
     #nosotros{
         display: flex;
         align-items: center;
@@ -144,21 +153,22 @@ main{
 
         aside{
             letter-spacing: 0;
+            //Titulo
             h2{
                 font-family: $ibm_plex;
                 font-size: 48px;
                 color: $color_menu;
             }
-    
+            //Parrafo
             p{
                 font-family: $ibm_mono;
                 color: $color_menu;
             }
         } 
-        
+//De donde venimos Desktop        
         @media (min-width: $breakpoint_mobile){
             margin-top: -110px;
-            
+            //Imagen
             img{
                 width: 457.6px;
                 height: 660px;
@@ -166,12 +176,12 @@ main{
             
             aside{
                 margin-left: 62.4px;
-
+                //Titulo
                 h2{
                     font-size: 48px;
                     line-height: 42px;
                 }
-
+                //Parrafo
                 p{
                     font-size: 16px;
                     line-height: 24px;
@@ -180,23 +190,23 @@ main{
                 }
             } 
         }
-
+//De donde venimos mobile
         @media (max-width: $breakpoint_mobile){
             flex-direction: column;
             margin-top: -80px;
-
+            //Imagen
             img{
-                width: 360px;
+                width: 100%;
                 height: 519px;
             }
 
             aside{
                 margin-left: 16px;
-    
+                //Titulo
                 h2{
                     font-size: 36px;
                 }
-
+                //Parrafo
                 p{
                     font-size: 14px;
                     line-height: 22px;
@@ -206,9 +216,9 @@ main{
             } 
         }
     }
-
+//Invitados Desktop
     #entrevistas{
-
+        //Titulo
         h2{
             font-family: $ibm_plex;
             font-size: 48px;
@@ -221,14 +231,15 @@ main{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-
+            //Imagen
             img{
-                width: 480px;
+                width: 33vw;
                 height: 364px;
             }
         }  
-        
+//Invitados Mobile       
         @media (max-width: $breakpoint_mobile){
+            //Titulo
             h2{
                 padding-left: 16px;
                 font-size: 32px;
@@ -240,19 +251,19 @@ main{
                 flex-wrap: wrap;
                 justify-content: center;
                 flex-direction: column;
-
+                //Imagen
                 img{
-                    width: 320px;
+                    width: 100%;
                     height: 243px;
                 }
             }          
         }
     }
-
+//Nuestros temas Desktop
     #topicos{
         letter-spacing: 0;
         position: relative;
-
+        //Titulo
         h2{
             font-family: $ibm_plex;
             font-size: 48px;
@@ -265,7 +276,7 @@ main{
             justify-content: space-between;
             align-items: center;
             list-style: none;
-            padding: 0 200px 0 200px;
+            padding: 0 200px 40px 200px;
 
             div{
                 display: flex;
@@ -273,20 +284,23 @@ main{
                 flex-direction: column;
                 width: 260px;
                 height: 194px;
-
+                //Imagenes
                 img{
                     width: 104px;
                     height: 104px;
                 }
-
+                //Descripcion imagen
                 p{
                     font-family: $ibm_plex; 
+                    font-weight: 600;
                     font-size: 24px;
                     text-align: center;
                 }
             }
-        } 
-        @media (max-width: $breakpoint_mobile){            
+        }
+//Nuestros temas Mobile         
+        @media (max-width: $breakpoint_mobile){ 
+            //Titulo           
             h2{
                 padding-left: 16px;
                 font-size: 36px;
@@ -309,14 +323,14 @@ main{
                 }
             }
         }
-        
-    }    
+    }   
+//Novedades Desktop     
     #novedades{
         margin-top: 50px;
+        //Fondo
         .fondoNov{
             background-image: linear-gradient(225deg, $bg_right_contenido 0%, $bg_left_contenido 100%);
             transform: skew(0, -5deg);
-            //min-height: 318px;
             position: relative;
             height: 400px;
             clip-path: polygon(
@@ -324,15 +338,19 @@ main{
                 100% 0,
                 100% 100%,
                 0 calc(100% - 8vw)
-            );       
+            );  
+            @media (max-width: $breakpoint_mobile){
+                width: 320px;
+                height: 350px;
+            }
         }
 
         aside{
             position: absolute;
             z-index: 1;
-            margin-top: 100px;
+            margin-top: 70px;
             width: 100%;
-            
+            //Titulo
             h3{
                 font-family: $ibm_plex;
                 font-size: 48px;
@@ -340,11 +358,12 @@ main{
                 letter-spacing: 0;
                 text-align: center;
             }
-    
+            //Boton
             button{
                 background: $color_boton;
                 border: none;
                 font-family: $ibm_mono;
+                font-weight: 500;
                 font-size: 18px;
                 text-align: center;
                 line-height: 24px;
@@ -355,19 +374,17 @@ main{
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-
-            @media (max-width: $breakpoint_mobile){ 
+//Novedades Mobile
+            @media (max-width: $breakpoint_mobile){
+                margin-top: 50px;
+                //Titulo 
                 h3{
                     font-size: 36px;
                     line-height: 42px;
                     height: 126px;
                     width: 288px;
                 }
-                
-                .fondoNov{
-                    height: 200px;
-                }
-
+                //Boton
                 button{
                     font-size: 16px;
                     line-height: 22px;
